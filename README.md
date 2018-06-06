@@ -41,55 +41,57 @@ Boolean check for Chain validity;
 
 StringUtil.java
 
-Applies sha256 to a string/ inputs and returns results
-Applies ECDSA Signatures and returns results
-Verifies a string signature
-Short hand helper to turn Object into a json string
-Returns difficulty sting target to compare to hash e.g. difficulty 5 will return 00000
-Takes in array of transactions and returns a merkle root
+Applies sha256 to a string/ inputs and returns results;
+Applies ECDSA Signatures and returns results;
+Verifies a string signature;
+Short hand helper to turn Object into a json string;
+Returns difficulty sting target to compare to hash e.g. difficulty 5 will return 00000;
+Takes in array of transactions and returns a merkle root;
 
 -------------------------------------------------
 
 Transaction.java
 
-TransactionId = hash of transaction
-Public key/ address of sender and recipient
-Signature
+TransactionId = hash of transaction;
+Public key/ address of sender and recipient;
+Signature;
 
 Constructor
 (PublicKey from, PublicKey to, float value, ArrayList<TransactionInput> inputs)
   
-  Calculates transaction hash, which will be used as its Id
-  Signs all data we don't wish to be tampered with
-  Verifies the data we signed hasn't been tampered with
+  Calculates transaction hash, which will be used as its Id;
+  Signs all data we don't wish to be tampered with;
+  Verifies the data we signed hasn't been tampered with;
   
-  Processing transactions
-    Gathers transaction inputs (makes sure they are unspent)
-    Checks if transaction is valid
-    Generate transaction outputs
-    Adds outputs to unspent list
-    Remove transaction inputs from UTXO lists as spent
+  Processing transactions,
+    Gathers transaction inputs (makes sure they are unspent);
+    Checks if transaction is valid;
+    Generate transaction outputs;
+    Adds outputs to unspent list;
+    Remove transaction inputs from UTXO lists as spent;
     
 Sums UTXO values
+
 Sums Outputs
 
 ----------------------------------------------------
 
 TransactionInput.java
 
-TransactionOutputId
+TransactionOutputId;
   Reference to transactionId
-TransactionOutputs UTXO
+  
+TransactionOutputs UTXO;
   Contains the Unspent transaction output
   
   -------------------------------------------------------------
   
   TransactionOutputs.java
   
-  id = sha256 hash
-  PublicKey recipient
-  Amount of coins transferred to new owner
-  parentTransactionID = the id of the transaction this output was created in
+  id = sha256 hash;
+  PublicKey recipient;
+  Amount of coins transferred to new owner;
+  parentTransactionID = the id of the transaction this output was created in;
   
   Constructor
     (PublicKey recipient, float value, String parentTransactionId)
