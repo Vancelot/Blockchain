@@ -13,7 +13,7 @@ public Block(String previousHash)
 Calculates new hash based on blocks contents using sha256 algorithm
 
 Increases nonce value until hash target is reached
-i.e. if difficulty = 5
+i.e. if difficulty = 5,
 hash = 00000______________________________
 
 Transactions are added to Block
@@ -27,15 +27,15 @@ HashMap (list) of of all unspent transactions (UTXOs)
 
 Bouncy castle is security provider
 
-Creates new wallets
+Creates new wallets,
 coinbase wallet generates coins to send to other wallets
 
-Boolean check for Chain validity
-  loop through blockchain to check hashes
-  compare registered hash and calculated hash
-  compare previous hash and registered previous hash
-  check if hash is solved
-  loop through blockchain transactions
+Boolean check for Chain validity;
+  loop through blockchain to check hashes;
+  compare registered hash and calculated hash;
+  compare previous hash and registered previous hash;
+  check if hash is solved;
+  loop through blockchain transactions;
 
 ---------------------------------------------------------
 
