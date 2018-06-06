@@ -42,10 +42,15 @@ Boolean check for Chain validity;
 StringUtil.java
 
 Applies sha256 to a string/ inputs and returns results;
+
 Applies ECDSA Signatures and returns results;
+
 Verifies a string signature;
+
 Short hand helper to turn Object into a json string;
-Returns difficulty sting target to compare to hash e.g. difficulty 5 will return 00000;
+
+Returns difficulty string target to compare to hash e.g. difficulty 5 will return 00000;
+
 Takes in array of transactions and returns a merkle root;
 
 -------------------------------------------------
@@ -53,7 +58,9 @@ Takes in array of transactions and returns a merkle root;
 Transaction.java
 
 TransactionId = hash of transaction;
+
 Public key/ address of sender and recipient;
+
 Signature;
 
 Constructor
@@ -89,8 +96,11 @@ TransactionOutputs UTXO;
   TransactionOutputs.java
   
   id = sha256 hash;
+  
   PublicKey recipient;
+  
   Amount of coins transferred to new owner;
+  
   parentTransactionID = the id of the transaction this output was created in;
   
   Constructor
